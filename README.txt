@@ -150,8 +150,3 @@ comando de verificación: php -V
 
 
 
-**CONCLUSION GENERAL**
-<a name="_urdfrlxc3oz6"></a>**
-
-==============================
-# <a name="_3y6t3a61b08a"></a>**BIIBLIOGRAFIA** 
