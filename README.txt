@@ -1,5 +1,3 @@
-Claro, puedo ayudarte a mejorar el formato de tu archivo README.md en GitHub para que las imágenes se muestren y para mejorar el estilo de los títulos. Asegúrate de que las imágenes estén en el mismo directorio raíz del repositorio con los nombres proporcionados. Aquí tienes el README.md con las correcciones:
-
 ```markdown
 ***INSTALANDO EL MOODLE Y TODO LO QUE NECESITAMOS***
 
