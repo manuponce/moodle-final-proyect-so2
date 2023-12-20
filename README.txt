@@ -1,152 +1,127 @@
-***INSTALANDO EL MODDLE Y TODO LO QUE NECESITAMOS***
+Claro, puedo ayudarte a mejorar el formato de tu archivo README.md en GitHub para que las imágenes se muestren y para mejorar el estilo de los títulos. Asegúrate de que las imágenes estén en el mismo directorio raíz del repositorio con los nombres proporcionados. Aquí tienes el README.md con las correcciones:
 
+```markdown
+***INSTALANDO EL MOODLE Y TODO LO QUE NECESITAMOS***
+
+```bash
 ~$ wget https://download.moodle.org/download.php/direct/stable400/moodle-latest-400.tgz
-
-
-![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.020.png)
-
+```
+![Imagen 1](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.020.png)
 
 ***INSTALAMOS APACHE***
+```bash
 ~$ sudo apt install -y apache2
-
-![imagen](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.021.png)
-
+```
+![Imagen 2](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.021.png)
 
 ***Descomprimimos el archivo que acabamos de descargar en su directorio de instalación definitivo:***
-
+```bash
 ~$ sudo tar xf moodle-latest-400.tgz -C /var/www/html/
-
-![imagen](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.022.png)
-![imagen](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.023.png)
-
+```
+![Imagen 3](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.022.png)
+![Imagen 4](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.023.png)
 
 ***Moodle necesita también un directorio de datos que crearemos fuera del alcance de la navegación web:***
-
+```bash
 ~$ sudo mkdir /var/www/moodledata
-
+```
 Como Moodle necesita escribir en ambas carpetas a través del servicio web, cambiaremos su propiedad al usuario con el que corre el servicio:
-
+```bash
 ~$ sudo chown -R www-data: /var/www/html/moodle/ /var/www/moodledata/
-
-![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.024.png)
-
+```
+![Imagen 5](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.024.png)
 
 ***Moodle requiere la presencia en Debian 11 Bullseye de algunas extensiones de este lenguaje que instalaremos desde los repositorios del sistema.***
-
-Si usamos la versión de PHP incluida en Debian 11, instalaremos estos paquetes:
-
+```bash
 ~$ sudo apt install -y php-{curl,gd,intl,mbstring,soap,xml,xmlrpc,zip}
+```
+![Imagen 6](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.025.png)
 
-![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.025.png)
-
+```bash
 ~$ sudo nano /etc/php/8.0/apache2/php.ini
-
-Buscamos la directiva *max\_input\_vars*:
-
-;max\_input\_vars = 1000
-
-Está desactivada, así que podemos activarla eliminando el carácter ; inicial y modificando su valor por 5000, o la dejamos como está y añadimos en la siguiente línea la nueva definición:
-![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.026.png)
+```
+Buscamos la directiva `max_input_vars`:
+```bash
+;max_input_vars = 1000
+```
+Está desactivada, así que podemos activarla eliminando el carácter `;` inicial y modificando su valor por 5000, o la dejamos como está y añadimos en la siguiente línea la nueva definición:
+![Imagen 7](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.026.png)
 
 Finalmente, recargamos la configuración del servicio web para que se puedan utilizar las nuevas extensiones y ajustes:
-
+```bash
 ~$ sudo systemctl reload apache2
+```
 
-Si trabajamos remotamente sobre la máquina Debian 11, podemos realizar la descarga desde consola con alguna herramienta como *wget*:
-
-~$ wget https://dev.mysql.com/get/mysql-apt-config\_0.8.24-1\_all.deb
-
+Si trabajamos remotamente sobre la máquina Debian 11, podemos realizar la descarga desde consola con alguna herramienta como `wget`:
+```bash
+~$ wget https://dev.mysql.com/get/mysql-apt-config_0.8.24-1_all.deb
+```
 Una vez descargado este paquete procedemos a instalarlo:
+```bash
+~$ sudo dpkg -i mysql-apt-config_0.8.24-1_all.deb
+```
+![Imagen 8](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.027.png)
 
-~$ sudo dpkg -i mysql-apt-config\_0.8.24-1\_all.deb
-
-![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.027.png)
-Conectamos al servicio con el cliente *mysql* y un usuario administrador:
-
+Conectamos al servicio con el cliente `mysql` y un usuario administrador:
+```bash
 ~$ mysql -u root -p
-
+```
 Creamos la base de datos:
-
-\> create database moodle character set utf8mb4 collate utf8mb4\_unicode\_ci;
-
+```sql
+> create database moodle character set utf8mb4 collate utf8mb4_unicode_ci;
+```
 Creamos el usuario:
-
-\> create user moodle@localhost identified by 'XXXXXXXX';
-
+```sql
+> create user moodle@localhost identified by 'XXXXXXXX';
+```
 Concedemos los permisos necesarios al usuario sobre la base de datos:
-
-\> grant all privileges on moodle.\* to moodle@localhost;
-
+```sql
+> grant all privileges on moodle.* to moodle@localhost;
+```
 Refrescamos la tabla de permisos:
-
-\> flush privileges;
-
+```sql
+> flush privileges;
+```
 Y cerramos la conexión:
+```sql
+> exit
+```
 
-\> exit
-
-***INSTALACIÓN DE MOODLE FINAL
-![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.028.png)***
-![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.029.png)
-![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.030.png)
-![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.031.png)
-![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.032.png)
-
-
+***INSTALACIÓN DE MOODLE FINAL***
+![Imagen 9](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.028.png)
+![Imagen 10](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.029.png)
+![Imagen 11](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.030.png)
+![Imagen 12](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.031.png)
+![Imagen 13](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.032.png)
 
 ***Usuarios Involucrados***
-![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.033.png)
-Comando utilizado: 
+![Imagen 14](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.033.png)
+Comando utilizado: 
+```bash
+# tail -n 7 etc/passwd
+```
 
-\# tail -n 7 etc/passwd
-
-
-
-***Software instalados: Apache
-Instalación de apache:***
-
-***sudo apt install apache2***
-
-![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.034.png)
+***Software instalados: Apache***
+***Instalación de Apache:***
+```bash
+sudo apt install apache2
+```
+![Imagen 15](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.034.png)
 Versión instalada de Apache2:
-
-comando para verificar la versión:
-
+Comando para verificar la versión:
+```bash
 apache2 -v
+```
+![Imagen 16](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.035.png)
 
-
-![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.035.png)
-
-
-
-
-
-***MySQL Server*** 
-
+***MySQL Server***
 ***Comando de instalación:***
-
-***sudo apt install mysql-server***
-
-![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.036.png)
-
+```bash
+sudo apt install mysql-server
+```
+![Imagen 17](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.036.png)
 Versión instalada de MySQL:
-
-comando de verificación: mysql -V
-
-![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.037.png)
-
-
-
-***Php***
-
-***Comando de instalación:***
-
-***sudo apt install php***
-
-![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.038.png)
-![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.039.png)Versión instalada de Php:
-
-comando de verificación: php -V
-
-
-
+Comando de verificación:
+```bash
+mysql -V
+```
