@@ -119,10 +119,9 @@ Comando de verificación:
 mysql -V
 ```
 
-***Php***
-***Comando de instalación:***
+***GUIA COMPLETA CON DETALLES***
 ```bash
-sudo apt install php
+https://docs.google.com/document/d/12zrnNntLsnVH0virnT_sRTeL1K9lmUBib607XQDlo5I/edit#heading=h.gjdgxs
 ```
 
 
