@@ -9,15 +9,15 @@
 ***INSTALAMOS APACHE***
 ~$ sudo apt install -y apache2
 
-![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.021.png)
+![imagen](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.021.png)
 
 
 ***Descomprimimos el archivo que acabamos de descargar en su directorio de instalación definitivo:***
 
 ~$ sudo tar xf moodle-latest-400.tgz -C /var/www/html/
 
-![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.022.png)
-![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.023.png)
+![imagen](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.022.png)
+![imagen](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.023.png)
 
 
 ***Moodle necesita también un directorio de datos que crearemos fuera del alcance de la navegación web:***
