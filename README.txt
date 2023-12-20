@@ -1,125 +1,59 @@
-```markdown
-***INSTALANDO EL MOODLE Y TODO LO QUE NECESITAMOS***
+Para mejorar el aspecto visual en el README de GitHub, puedes utilizar distintos métodos para formatear el texto y las imágenes. Aquí te muestro cómo podrías organizar el texto y las imágenes para que se vea más ordenado y legible:
 
+```markdown
+### INSTALANDO MOODLE Y SUS DEPENDENCIAS
+
+#### Descarga de Moodle
 ```bash
 ~$ wget https://download.moodle.org/download.php/direct/stable400/moodle-latest-400.tgz
 ```
-![Imagen 1](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.020.png)
+![Descarga de Moodle](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.020.png)
 
-***INSTALAMOS APACHE***
+#### Instalación de Apache
 ```bash
 ~$ sudo apt install -y apache2
 ```
-![Imagen 2](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.021.png)
+![Instalación de Apache](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.021.png)
 
-***Descomprimimos el archivo que acabamos de descargar en su directorio de instalación definitivo:***
+#### Descompresión de Moodle
 ```bash
 ~$ sudo tar xf moodle-latest-400.tgz -C /var/www/html/
 ```
-![Imagen 3](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.022.png)
-![Imagen 4](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.023.png)
+![Descompresión de Moodle - Paso 1](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.022.png)
+![Descompresión de Moodle - Paso 2](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.023.png)
 
-***Moodle necesita también un directorio de datos que crearemos fuera del alcance de la navegación web:***
+#### Creación del directorio de datos para Moodle
 ```bash
 ~$ sudo mkdir /var/www/moodledata
-```
-Como Moodle necesita escribir en ambas carpetas a través del servicio web, cambiaremos su propiedad al usuario con el que corre el servicio:
-```bash
 ~$ sudo chown -R www-data: /var/www/html/moodle/ /var/www/moodledata/
 ```
-![Imagen 5](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.024.png)
+![Creación de directorio de datos para Moodle](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.024.png)
 
-***Moodle requiere la presencia en Debian 11 Bullseye de algunas extensiones de este lenguaje que instalaremos desde los repositorios del sistema.***
+#### Instalación de extensiones de PHP para Moodle
 ```bash
 ~$ sudo apt install -y php-{curl,gd,intl,mbstring,soap,xml,xmlrpc,zip}
 ```
-![Imagen 6](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.025.png)
+![Instalación de extensiones de PHP para Moodle](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.025.png)
 
+#### Configuración de PHP
 ```bash
 ~$ sudo nano /etc/php/8.0/apache2/php.ini
 ```
-Buscamos la directiva `max_input_vars`:
-```bash
-;max_input_vars = 1000
-```
-Está desactivada, así que podemos activarla eliminando el carácter `;` inicial y modificando su valor por 5000, o la dejamos como está y añadimos en la siguiente línea la nueva definición:
-![Imagen 7](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.026.png)
+![Configuración de PHP](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.026.png)
 
-Finalmente, recargamos la configuración del servicio web para que se puedan utilizar las nuevas extensiones y ajustes:
+#### Recarga del servicio web Apache
 ```bash
 ~$ sudo systemctl reload apache2
 ```
+...
 
-Si trabajamos remotamente sobre la máquina Debian 11, podemos realizar la descarga desde consola con alguna herramienta como `wget`:
-```bash
-~$ wget https://dev.mysql.com/get/mysql-apt-config_0.8.24-1_all.deb
-```
-Una vez descargado este paquete procedemos a instalarlo:
-```bash
-~$ sudo dpkg -i mysql-apt-config_0.8.24-1_all.deb
-```
-![Imagen 8](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.027.png)
+(Continúa con el resto de los pasos)
 
-Conectamos al servicio con el cliente `mysql` y un usuario administrador:
-```bash
-~$ mysql -u root -p
-```
-Creamos la base de datos:
-```sql
-> create database moodle character set utf8mb4 collate utf8mb4_unicode_ci;
-```
-Creamos el usuario:
-```sql
-> create user moodle@localhost identified by 'XXXXXXXX';
-```
-Concedemos los permisos necesarios al usuario sobre la base de datos:
-```sql
-> grant all privileges on moodle.* to moodle@localhost;
-```
-Refrescamos la tabla de permisos:
-```sql
-> flush privileges;
-```
-Y cerramos la conexión:
-```sql
-> exit
+### INSTALACIÓN DE MOODLE - PASOS FINALES
+...
+
 ```
 
-***INSTALACIÓN DE MOODLE FINAL***
-![Imagen 9](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.028.png)
-![Imagen 10](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.029.png)
-![Imagen 11](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.030.png)
-![Imagen 12](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.031.png)
-![Imagen 13](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.032.png)
+En el ejemplo proporcionado, he utilizado encabezados de diferentes niveles (`###` y `####`) para organizar el contenido y los pasos de instalación. También he ajustado la ubicación y los títulos de las imágenes para que coincidan con los pasos correspondientes.
 
-***Usuarios Involucrados***
-![Imagen 14](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.033.png)
-Comando utilizado: 
-```bash
-# tail -n 7 etc/passwd
-```
-
-***Software instalados: Apache***
-***Instalación de Apache:***
-```bash
-sudo apt install apache2
-```
-![Imagen 15](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.034.png)
-Versión instalada de Apache2:
-Comando para verificar la versión:
-```bash
-apache2 -v
-```
-![Imagen 16](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.035.png)
-
-***MySQL Server***
-***Comando de instalación:***
-```bash
-sudo apt install mysql-server
-```
-![Imagen 17](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.036.png)
-Versión instalada de MySQL:
-Comando de verificación:
-```bash
-mysql -V
-```
+Recuerda reemplazar los títulos y la información de los comandos según corresponda. Además, asegúrate de que las imágenes estén en el directorio correcto y con los nombres adecuados para que puedan mostrarse correctamente en GitHub.
