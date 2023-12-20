@@ -41,7 +41,7 @@ Buscamos la directiva `max_input_vars`:
 ;max_input_vars = 1000
 ```
 Está desactivada, así que podemos activarla eliminando el carácter `;` inicial y modificando su valor por 5000, o la dejamos como está y añadimos en la siguiente línea la nueva definición:
-![Imagen 7](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.026.png)
+
 
 Finalmente, recargamos la configuración del servicio web para que se puedan utilizar las nuevas extensiones y ajustes:
 ```bash
@@ -84,15 +84,14 @@ Y cerramos la conexión:
 ```
 
 ***INSTALACIÓN DE MOODLE FINAL***
-![Imagen 9](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.028.png)
-![Imagen 10](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.029.png)
-![Imagen 11](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.030.png)
-![Imagen 12](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.031.png)
-![Imagen 13](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.032.png)
+![Imagen 9](moodle 1.png)
+![Imagen 10](moodle 2.png)
+![Imagen 10](moodle 3.png)
+![Imagen 10](moodle 4.png)
 
-***Usuarios Involucrados***
-![Imagen 14](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.033.png)
-Comando utilizado: 
+
+
+Comando utilizado para los usuarios: 
 ```bash
 # tail -n 7 etc/passwd
 ```
@@ -108,20 +107,18 @@ Comando para verificar la versión:
 ```bash
 apache2 -v
 ```
-![Imagen 16](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.035.png)
 
 ***MySQL Server*** 
 ***Comando de instalación:***
 ```bash
 sudo apt install mysql-server
 ```
-![Imagen 17](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.036.png)
+
 Versión instalada de MySQL:
 Comando de verificación:
 ```bash
 mysql -V
 ```
-![Imagen 18](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.037.png)
 
 ***Php***
 ***Comando de instalación:***
