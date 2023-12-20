@@ -125,8 +125,5 @@ mysql -V
 sudo apt install php
 ```
 
-Versión instalada de Php:
-Comando de verificación: `php -V`
-```
 
 
