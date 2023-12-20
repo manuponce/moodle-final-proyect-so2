@@ -1,166 +1,9 @@
-
-<a name="_gjdgxs"></a>UNIVERSIDAD PRIVADA
-
-DOMINGO SAVIO
-
-
-
-
-
-
-
-
-
-
-
-
-![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.001.png)![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.002.png)
-
-
-
-
-a
-
-
-
-
-
-
-
-
-**Proyecto Final**
-**
-
-Emmanuel Freddy Ponce Quiroga
-Leonardo Carrillo
-Grethel J. Fernández Orellana**
-Luis Andres Zurita Molina
-
-**Turno:** Medio Dia
-
-**Materia: SISTEMAS OPERATIVOS 2
-
-Docente: Ing. Jaime Zambrana Chácon**
-
-
-
-
-
-
-![C:\Users\User\Downloads\descarga.png](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.003.png)![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.004.png)![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.005.png)![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.006.png)![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.007.png)![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.008.png)
-# **1.   	CARÁTULA**
-# **2.   	INDICE**
-# **3.   	INTRODUCCION**
-# **4.   	OBJETIVO**
-# **5.   	MARCO TEORICO**
-# **6.   	PROCESO DE FUNCIONAMIENTO**
-# <a name="_eyp6tlq8yjhz"></a>**7.   	DIAGRAMA DE FUNCIONAMIENTO**
-# <a name="_jq5v04ci8l1d"></a>**8.   	CONCLUSION**
-<a name="_b5s1b23bwg85"></a>**9.   	BIIBLIOGRAFIA** 
-
-
-
-
-
-
-
-
-
-
-====================================================
-#
-#
-<a name="_a7b0lwmk0tjy"></a><a name="_u5df30wkdjlt"></a><a name="_o3anh3r74qn7"></a>**INTRODUCCION** 
-EL SISTEMA OPERATIVO UNIVERSAL
-
-![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.009.png)
-Debian es una de las distribuciones 
-
-Linux más conocidas y respetadas. Fue creada por Ian Murdock en 1993, quien se inspiró en el proyecto GNU de la Free Software Foundation y buscaba construir un sistema operativo completamente libre y abierto, basado en el núcleo Linux. El nombre Debian se deriva de la combinación del nombre de Ian y el de su entonces novia, ahora esposa, Debra.**
-
-
-
-
-
-
-
-
-
-============================================================================================================================================================================================================================================================================================================================================================
-#
-#
-#
-#
-<a name="_8zj7bqhxnmot"></a><a name="_nnxmzjfoei75"></a><a name="_gh1kclgrvyb"></a><a name="_i9yhnctsizh"></a><a name="_58j4m59uvmld"></a>
-
-**OBJETIVO**
-==========================================================================================================================================
-El objetivo principal de Debian es desarrollar un sistema operativo estable, seguro y fácilmente adaptable, manteniendo un compromiso firme con los principios del software libre. Uno de los aspectos fundamentales de Debian es su gestor de paquetes, APT (Advanced Package Tool), que facilita la instalación, actualización y eliminación de software de forma sencilla y eficiente.
-![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.010.png)
-
-
-
-# <a name="_vz1hjswff8lt"></a>**MARCO TEÓRICO**
-Google Cloud ![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.011.png)
-"Google Cloud Computing es la robusta plataforma en la nube de Google diseñada para proporcionar una amplia gama de servicios y herramientas para empresas y desarrolladores. Ofrece una infraestructura escalable y segura que permite almacenar datos, ejecutar aplicaciones y aprovechar tecnologías innovadoras como el aprendizaje automático y el análisis de datos en tiempo real. Con servicios como almacenamiento de datos, cómputo, bases de datos, aprendizaje automático y herramientas de desarrollo, Google Cloud se destaca por su flexibilidad, potencia y fiabilidad en la gestión y transformación de datos, así como en el despliegue ágil de aplicaciones en la nube para satisfacer las necesidades de distintos tipos de proyectos y empresas."
-# <a name="_epeyg3inl1kr"></a>**Configuración de Google Cloud**
-![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.012.png)
-# <a name="_dezgxyblljju"></a>**PROCESO DE FUNCIONAMIENTO**
-
-REGION
-
-![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.013.png)
-
-![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.014.png)
-
-
-
-
-![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.015.png)
-
-![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.016.png)
-
-![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.017.png)
-
-
-
-
-
-
-***VIRTUAL PRIVATE CLOUD*** 
-![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.018.png)
-
-
-
-
-![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.019.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ***INSTALANDO EL MODDLE Y TODO LO QUE NECESITAMOS***
 
 ~$ wget https://download.moodle.org/download.php/direct/stable400/moodle-latest-400.tgz
 
-CESITAMO
 
 ![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.020.png)
-
-
-
-
 
 
 ***INSTALAMOS APACHE***
@@ -177,7 +20,6 @@ CESITAMO
 ![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.023.png)
 
 
-
 ***Moodle necesita también un directorio de datos que crearemos fuera del alcance de la navegación web:***
 
 ~$ sudo mkdir /var/www/moodledata
@@ -187,7 +29,6 @@ Como Moodle necesita escribir en ambas carpetas a través del servicio web, camb
 ~$ sudo chown -R www-data: /var/www/html/moodle/ /var/www/moodledata/
 
 ![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.024.png)
-
 
 
 ***Moodle requiere la presencia en Debian 11 Bullseye de algunas extensiones de este lenguaje que instalaremos desde los repositorios del sistema.***
