@@ -1,4 +1,3 @@
-```markdown
 ***INSTALANDO EL MOODLE Y TODO LO QUE NECESITAMOS***
 
 ```bash
@@ -123,9 +122,7 @@ Comando de verificación:
 ```bash
 mysql -V
 ```
-![Imagen 18](Aspose.Words.e7ac
-
-596c-2d04-4ee4-b8d2-8d04ee08328c.037.png)
+![Imagen 18](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.037.png)
 
 ***Php***
 ***Comando de instalación:***
@@ -137,49 +134,5 @@ sudo apt install php
 Versión instalada de Php:
 Comando de verificación: `php -V`
 ```
-
-Reemplaza `XXXXXXXX` con la contraseña real, y asegúrate de que los nombres de archivo de las imágenes coincidan exactamente con lo que has proporcionado en el Markdown (`Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.XXX.png`).
-***Software instalados: Apache
-Instalación de apache:***
-
-***sudo apt install apache2***
-
-![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.034.png)
-Versión instalada de Apache2:
-
-comando para verificar la versión:
-
-apache2 -v
-
-
-![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.035.png)
-
-
-***MySQL Server*** 
-
-***Comando de instalación:***
-
-***sudo apt install mysql-server***
-
-![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.036.png)
-
-Versión instalada de MySQL:
-
-comando de verificación: mysql -V
-
-![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.037.png)
-
-
-
-***Php***
-
-***Comando de instalación:***
-
-***sudo apt install php***
-
-![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.038.png)
-![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.039.png)Versión instalada de Php:
-
-comando de verificación: php -V
 
 
