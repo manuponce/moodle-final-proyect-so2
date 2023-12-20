@@ -56,7 +56,6 @@ Una vez descargado este paquete procedemos a instalarlo:
 ```bash
 ~$ sudo dpkg -i mysql-apt-config_0.8.24-1_all.deb
 ```
-![Imagen 8](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.027.png)
 
 Conectamos al servicio con el cliente `mysql` y un usuario administrador:
 ```bash
@@ -101,7 +100,7 @@ Comando utilizado para los usuarios:
 ```bash
 sudo apt install apache2
 ```
-![Imagen 15](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.034.png)
+
 Versión instalada de Apache2:
 Comando para verificar la versión:
 ```bash
@@ -125,8 +124,7 @@ mysql -V
 ```bash
 sudo apt install php
 ```
-![Imagen 19](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.038.png)
-![Imagen 20](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.039.png)
+
 Versión instalada de Php:
 Comando de verificación: `php -V`
 ```
