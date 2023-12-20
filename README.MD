@@ -32,7 +32,7 @@ Como Moodle necesita escribir en ambas carpetas a través del servicio web, camb
 ```bash
 ~$ sudo apt install -y php-{curl,gd,intl,mbstring,soap,xml,xmlrpc,zip}
 ```
-https://imgur.com/a/ZUpTlJg
+<blockquote class="imgur-embed-pub" lang="en" data-id="a/ZUpTlJg" data-context="false" ><a href="//imgur.com/a/ZUpTlJg"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 ```bash
 ~$ sudo nano /etc/php/8.0/apache2/php.ini
 ```
