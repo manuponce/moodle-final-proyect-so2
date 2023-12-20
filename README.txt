@@ -94,10 +94,6 @@ Y cerramos la conexión:
 
 
 
-
-
-
-
 ***Usuarios Involucrados***
 ![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.033.png)
 Comando utilizado: 
@@ -120,20 +116,6 @@ apache2 -v
 
 
 ![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.035.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -165,9 +147,6 @@ comando de verificación: mysql -V
 ![](Aspose.Words.e7ac596c-2d04-4ee4-b8d2-8d04ee08328c.039.png)Versión instalada de Php:
 
 comando de verificación: php -V
-
-
-
 
 
 
